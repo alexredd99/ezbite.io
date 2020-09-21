@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Serif', serif;
+    background: #E0CC79;
+    font-size: 20px;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin: 1em 0;
+}
+
+.category { 
+    line-height: 1.7rem;
+}
+
+.category:hover, .contact:hover, a:hover, .retry {
+    color: white;
+    cursor: pointer;
+}
+
+.upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5em; 
+    background: #4C7E75;
+    height: 1.2em;
+    align-items: center;
+}
+
+.upper span {
+    color: white;
+}
+
+.upper .logo {
+    float: left;
+    position: relative;
+}
+
+.upper .contact {
+    float: right;
+    position: relative;
+
+}
+
+.leftColumn {
+    padding: 0;
+}
+
+.rightColumn{
+    margin: 2em 0 1em;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contentLeft, .contentMiddle, .contentRight {
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    margin-bottom: 1em;
+}
+
+.restaurantBox, .contactBox, .aboutBox { 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #4C7E75;
+}
+
+.restBoxContent, #contactForm, .contactBoxContent, .aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commentBox {
+    width: 20em;
+    height: 10em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+}
+
+.retry {
+    display: table;
+    margin: auto;
+    padding-top: 2em;
+}
+
+#map {
+    height: 12em;
+    width: 12em;
+}
+
+.restInfo {
+    color: #E0CC79;
+}
+
+.exit {
+    margin-top: 1em;
+    color: white;
+}
+
+.exit:hover {
+    cursor: pointer;
+    color: #E0CC79;
+}
+
+.about:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.aboutTop {
+    margin-top: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 30px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .upper, .rightColumn {
+        font-size: 40px !important;
+    }
+
+    .inner {
+        display: grid;
+        grid-template-columns: 45% auto;
+    }
+
+    .leftColumn {
+        padding: 0 2em;
+        display: flex;
+        line-height: 25em;
+    }
+    
+    .rightColumn {
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+    .content {
+        display: grid;
+        grid-template-areas:
+            'leftCont middleCont rightCont'
+            'leftCont middleCont rightCont'
+            'leftCont middleCont rightCont'
+            '. anything anything';
+        text-align: left;
+        column-gap: 1.5em;
+        row-gap: 2.5em;
+        grid-template-columns: auto;
+    }
+
+    .contentLeft, .contentMiddle, .contentRight, .anything {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5em;
+    }
+
+    .contentLeft {
+        grid-area: leftCont;
+    }
+    
+    .contentMiddle {
+        grid-area: middleCont;
+    }
+    
+    .contentRight {
+        grid-area: rightCont;
+    }
+    
+    .anything {
+        grid-area: anything;
+    }  
+}

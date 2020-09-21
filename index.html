@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+        <title>ezbite.io</title>
+        <link rel='stylesheet' href='/main.css'>
+    </head>
+   <body>
+        <div class='upper'>
+            <p class='logo'><span>ez</span>bite.io</p>
+            <p class='about' id='about'>about</p>
+            <p class='contact' id='contact'>contact</p>
+        </div>
+        <div class='container'>
+            <div class='inner'>
+                <div class='leftColumn'>
+                    <h1>I could go for...</h1>
+                </div>
+                <div class='rightColumn'>
+                    <div class='content'>
+                        <div class='contentLeft'>
+                            <span class='category' id='breakfast'>breakfast</span>
+                            <span class='category' id='burgers'>burgers</span>
+                            <span class='category' id='coffee'>coffee</span>
+                        </div>
+                        <div class='contentMiddle'>
+                            <span class='category' id='fast food'>fast food</span>
+                            <span class='category' id='ice cream'>ice cream</span>
+                            <span class='category' id='italian'>italian</span>
+                        </div>
+                        <div class='contentRight'>
+                            <span class='category' id='latin'>latin</span>
+                            <span class='category' id='pan-asian'>pan-asian</span>
+                            <span class='category' id='pizza'>pizza</span>
+                        </div>
+                        <span class='category anything' id='anything'>...anything!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='restaurantBox'>
+            <div class='restBoxContent'>
+                <h1 class='restName' id='restName'>Burger King</h1>
+                <div class='restInfo' id='restInfo'></div>
+                <p class='restNumber' id='restNumber'>(847) 864-9199</p>
+
+                <div id='map'></div>
+            
+            </div>
+            <div class='retry'>Retry</div>
+        </div>
+
+        <div class='contactBox' id='contactBox'>
+            <div class='contactBoxContent'>
+                <div class='exit' id='exit'>x</div>
+                <h1>Contact</h1>
+                <form id='contactForm'>
+                    <label for='name'>Name</label>
+                    <input type='text' id='name' name='name'><br>
+                    <label for='comment'>Comment</label>
+                    <textarea class='commentBox' id='comment' name='comment'></textarea>
+                    <input class='submit' type='submit' value='Submit'>
+                </form>
+            </div>
+        </div>
+
+        <div class='aboutBox' id='aboutBox'>
+            <div class='aboutContent'>
+                <div class='exit' id='aboutExit'>x</div>
+                <span class='aboutTop'>Not sure where to eat?</span>
+                <span>Want to try something new?</span>
+                <span>Let <span style='color:white;'>ez</span>bite.io help!</span>
+            </div>
+        </div>
+
+        <script type='module' src='/script.js'></script>
+        <script async type='module' src='/restaurantList.js'></script>
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key= REMOVED FOR GITHUB &libraries=places">
+        </script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+        <script src='/app.js'></script>
+    </body> 
+</html>
